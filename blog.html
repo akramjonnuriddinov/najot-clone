@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <!-- NORMALIZE -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__container container">
+        <a href="index.html" class="header__logo">
+          <img src="./img/header-logo.svg" alt="header logo" />
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./courses.html" class="nav__link"> Kurslar </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Blog</a>
+            </li>
+          </ul>
+          <a class="header__button" href="#">Kirish</a>
+        </nav>
+        <div class="header__dark-mode">
+          <button class="header__dark-mode-btn dark-mode-btn">
+            <svg
+              class="dark-mode-moon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="23"
+              fill="none"
+            >
+              <path
+                fill="currentColor"
+                d="M11 3.708a7.792 7.792 0 1 0 7.756 8.544.458.458 0 0 0-.745-.4 4.583 4.583 0 1 1-5.626-7.235.458.458 0 0 0-.206-.82A7.849 7.849 0 0 0 11 3.708Z"
+              />
+            </svg>
+            <svg
+              class="dark-mode-sun dark-mode-icon-none"
+              width="23"
+              height="23"
+              viewBox="0 0 23 23"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.4997 1.646C11.8794 1.646 12.1872 1.9538 12.1872 2.3335V3.25016C12.1872 3.62986 11.8794 3.93766 11.4997 3.93766C11.12 3.93766 10.8122 3.62986 10.8122 3.25016V2.3335C10.8122 1.9538 11.12 1.646 11.4997 1.646Z"
+                fill="white"
+              />
+              <path
+                d="M11.4997 6.22933C8.58867 6.22933 6.22884 8.58916 6.22884 11.5002C6.22884 14.4112 8.58867 16.771 11.4997 16.771C14.4107 16.771 16.7705 14.4112 16.7705 11.5002C16.7705 8.58916 14.4107 6.22933 11.4997 6.22933Z"
+                fill="white"
+              />
+              <path
+                d="M5.50401 4.53224C5.23553 4.26375 4.80022 4.26375 4.53174 4.53224C4.26325 4.80072 4.26325 5.23602 4.53174 5.50451L5.17992 6.15269C5.44841 6.42117 5.88371 6.42117 6.15219 6.15269C6.42068 5.8842 6.42068 5.4489 6.15219 5.18042L5.50401 4.53224Z"
+                fill="white"
+              />
+              <path
+                d="M21.3538 11.5002C21.3538 11.8799 21.046 12.1877 20.6663 12.1877H19.7497C19.37 12.1877 19.0622 11.8799 19.0622 11.5002C19.0622 11.1205 19.37 10.8127 19.7497 10.8127H20.6663C21.046 10.8127 21.3538 11.1205 21.3538 11.5002Z"
+                fill="white"
+              />
+              <path
+                d="M18.4676 5.5045C18.7361 5.23601 18.7361 4.80071 18.4676 4.53223C18.1991 4.26374 17.7638 4.26374 17.4953 4.53223L16.8471 5.18041C16.5787 5.44889 16.5787 5.88419 16.8471 6.15268C17.1156 6.42117 17.5509 6.42117 17.8194 6.15268L18.4676 5.5045Z"
+                fill="white"
+              />
+              <path
+                d="M11.4997 19.0627C11.8794 19.0627 12.1872 19.3705 12.1872 19.7502V20.6668C12.1872 21.0465 11.8794 21.3543 11.4997 21.3543C11.12 21.3543 10.8122 21.0465 10.8122 20.6668V19.7502C10.8122 19.3705 11.12 19.0627 11.4997 19.0627Z"
+                fill="white"
+              />
+              <path
+                d="M17.8195 16.8476C17.551 16.5792 17.1157 16.5792 16.8472 16.8476C16.5787 17.1161 16.5787 17.5514 16.8472 17.8199L17.4954 18.4681C17.7639 18.7366 18.1992 18.7366 18.4677 18.4681C18.7361 18.1996 18.7361 17.7643 18.4677 17.4958L17.8195 16.8476Z"
+                fill="white"
+              />
+              <path
+                d="M3.93717 11.5002C3.93717 11.8799 3.62937 12.1877 3.24967 12.1877H2.33301C1.95331 12.1877 1.64551 11.8799 1.64551 11.5002C1.64551 11.1205 1.95331 10.8127 2.33301 10.8127H3.24967C3.62937 10.8127 3.93717 11.1205 3.93717 11.5002Z"
+                fill="white"
+              />
+              <path
+                d="M6.15213 17.8199C6.42062 17.5514 6.42062 17.1161 6.15213 16.8476C5.88365 16.5792 5.44834 16.5792 5.17986 16.8476L4.53168 17.4958C4.26319 17.7643 4.26319 18.1996 4.53168 18.4681C4.80016 18.7366 5.23546 18.7366 5.50395 18.4681L6.15213 17.8199Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+          <button class="dark-mode__light">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="21"
+              fill="none"
+            >
+              <path
+                fill="currentColor"
+                d="M10.5.646c.38 0 .688.308.688.687v.917a.687.687 0 1 1-1.376 0v-.917c0-.38.308-.687.688-.687ZM10.5 5.23a5.27 5.27 0 1 0 0 10.541 5.27 5.27 0 0 0 0-10.542ZM4.504 3.532a.688.688 0 1 0-.972.973l.648.648a.688.688 0 0 0 .973-.973l-.649-.648ZM20.354 10.5c0 .38-.308.688-.687.688h-.917a.687.687 0 1 1 0-1.375h.917c.38 0 .687.307.687.687ZM17.468 4.505a.687.687 0 1 0-.972-.973l-.648.648a.687.687 0 1 0 .972.973l.648-.648ZM10.5 18.063c.38 0 .688.308.688.687v.917a.687.687 0 1 1-1.376 0v-.917c0-.38.308-.687.688-.687ZM16.82 15.848a.688.688 0 0 0-.973.972l.649.648a.688.688 0 1 0 .972-.972l-.648-.648ZM2.938 10.5c0 .38-.308.688-.688.688h-.917a.687.687 0 1 1 0-1.375h.917c.38 0 .688.307.688.687ZM5.152 16.82a.688.688 0 0 0-.972-.972l-.648.648a.688.688 0 0 0 .972.972l.648-.648Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <button class="header__burger">
+          <svg
+            class="header__burger__img"
+            width="24"
+            height="15"
+            viewBox="0 0 18 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.125 13.375H16.875M1.125 7.375H16.875M1.125 1.375H16.875"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <div class="mobile-menu">
+          <div class="mobile-menu__overlay"></div>
+          <div class="mobile-menu__tablet">
+            <div class="mobile-menu__tablet__top">
+              <a href="#" class="mobile-menu__tablet__logo">
+                <img src="./img/header-logo.svg" alt="header logo" />
+              </a>
+              <button class="mobile-menu__close">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class=""
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mobile-menu__tablet__main">
+              <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                  <a href="./courses.html" class="mobile-menu__link">Kurslar</a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a href="#" class="mobile-menu__link">Blog</a>
+                </li>
+                <li class="mobile-menu__item" hidden>
+                  <div class="mobile-menu__item__toggle">
+                    <span class="mobile-menu__item__toggle__title"
+                      >Ma'lumotlar</span
+                    >
+                    <button class="mobile-menu__item__toggle-down">
+                      <img src="./img/icon-down.svg" alt="" />
+                    </button>
+                  </div>
+                  <ul class="mobile-menu__item__toggle__list">
+                    <li class="mobile-menu__item__toggle-item">
+                      <a href="#" class="mobile-menu__item__toggle__link">
+                        Blog
+                      </a>
+                    </li>
+                    <li class="mobile-menu__item__toggle-item">
+                      <a href="#" class="mobile-menu__item__toggle__link">
+                        FAQ
+                      </a>
+                    </li>
+                    <li class="mobile-menu__item__toggle-item">
+                      <a href="#" class="mobile-menu__item__toggle__link">
+                        Ommaviy oferta
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- /HEADER -->
+
+    <section class="blog">
+      <div class="blog__container container">
+        <section class="blog-hero__section">
+          <ul class="breadcrumb">
+            <li class="breadcrumb__item">
+              <a class="breadcrumb__link" href="#">Bosh sahifa</a>
+            </li>
+            <li class="breadcrumb__item">
+              <a class="breadcrumb__link breadcrumb__link--active" href="#"
+                >Bloglar</a
+              >
+            </li>
+          </ul>
+        </section>
+        <ul class="blog-filter__list">
+          <li class="blog-filter__item">
+            <button class="blog-filter__link active">Barchasi</button>
+          </li>
+          <li class="blog-filter__item">
+            <button class="blog-filter__link">Bitiruv marosimi</button>
+          </li>
+          <li class="blog-filter__item">
+            <button class="blog-filter__link">Master-klass</button>
+          </li>
+          <li class="blog-filter__item">
+            <button class="blog-filter__link">Musobaqa</button>
+          </li>
+          <li class="blog-filter__item">
+            <button class="blog-filter__link">Dasturlash</button>
+          </li>
+          <li class="blog-filter__item">
+            <button class="blog-filter__link">Najot Quiz</button>
+          </li>
+        </ul>
+
+        <ul class="blog-article__list">
+          <li class="blog-article__item">
+            <a href="#" class="blog-article__link">
+              <img
+                class="blog-article__img"
+                src="./img/image.png"
+                alt="blog article img"
+              />
+              <div class="blog-article__date">
+                <time class="blog-article__date-time"> 19-aprel, 2023 </time>
+                <span class="blog-article__date-time">
+                  <svg
+                    width="17"
+                    height="17"
+                    viewBox="0 0 17 17"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.9717 7.8106C15.2877 8.22394 15.2877 8.78194 14.9717 9.1946C13.9763 10.4939 11.5883 13.1693 8.80038 13.1693C6.01238 13.1693 3.62438 10.4939 2.62905 9.1946C2.47531 8.99669 2.39185 8.75322 2.39185 8.5026C2.39185 8.25199 2.47531 8.00852 2.62905 7.8106C3.62438 6.51127 6.01238 3.83594 8.80038 3.83594C11.5883 3.83594 13.9763 6.51127 14.9717 7.8106Z"
+                      stroke="black"
+                      stroke-opacity="0.35"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8.80005 10.5C9.90462 10.5 10.8 9.60457 10.8 8.5C10.8 7.39543 9.90462 6.5 8.80005 6.5C7.69548 6.5 6.80005 7.39543 6.80005 8.5C6.80005 9.60457 7.69548 10.5 8.80005 10.5Z"
+                      stroke="black"
+                      stroke-opacity="0.35"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  119</span
+                >
+              </div>
+              <h3 class="blog-article__title">
+                16-aprel kuni «Najot Ta'lim»da SMM menejerlari uchun story
+                management
+              </h3>
+              <p class="blog-article__text">«SMM musobaqasi» bo'lib o'tdi</p>
+            </a>
+          </li>
+          <li class="blog-article__item">
+            <a href="#" class="blog-article__link">
+              <img
+                class="blog-article__img"
+                src="./img/image-1.png"
+                alt="blog article img"
+              />
+              <div class="blog-article__date">
+                <time class="blog-article__date-time"> 19-aprel, 2023 </time>
+                <span class="blog-article__date-time">
+                  <svg
+                    width="17"
+                    height="17"
+                    viewBox="0 0 17 17"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.9717 7.8106C15.2877 8.22394 15.2877 8.78194 14.9717 9.1946C13.9763 10.4939 11.5883 13.1693 8.80038 13.1693C6.01238 13.1693 3.62438 10.4939 2.62905 9.1946C2.47531 8.99669 2.39185 8.75322 2.39185 8.5026C2.39185 8.25199 2.47531 8.00852 2.62905 7.8106C3.62438 6.51127 6.01238 3.83594 8.80038 3.83594C11.5883 3.83594 13.9763 6.51127 14.9717 7.8106Z"
+                      stroke="black"
+                      stroke-opacity="0.35"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8.80005 10.5C9.90462 10.5 10.8 9.60457 10.8 8.5C10.8 7.39543 9.90462 6.5 8.80005 6.5C7.69548 6.5 6.80005 7.39543 6.80005 8.5C6.80005 9.60457 7.69548 10.5 8.80005 10.5Z"
+                      stroke="black"
+                      stroke-opacity="0.35"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  92</span
+                >
+              </div>
+              <h3 class="blog-article__title">
+                Farg'ona filialida «Engineericly» YouTube kanali asoschisi
+                Jahongirmirzo Ibrohimo
+              </h3>
+              <p class="blog-article__text">
+                «Engineericly» YouTube kanali asoschisi Jahongirmirzo Ibrohimov
+                bilan master-klass
+              </p>
+            </a>
+          </li>
+          <li class="blog-article__item">
+            <a href="#" class="blog-article__link">
+              <img
+                class="blog-article__img"
+                src="./img/image-2.png"
+                alt="blog article img"
+              />
+              <div class="blog-article__date">
+                <time class="blog-article__date-time"> 19-aprel, 2023 </time>
+                <span class="blog-article__date-time">
+                  <svg
+                    width="17"
+                    height="17"
+                    viewBox="0 0 17 17"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.9717 7.8106C15.2877 8.22394 15.2877 8.78194 14.9717 9.1946C13.9763 10.4939 11.5883 13.1693 8.80038 13.1693C6.01238 13.1693 3.62438 10.4939 2.62905 9.1946C2.47531 8.99669 2.39185 8.75322 2.39185 8.5026C2.39185 8.25199 2.47531 8.00852 2.62905 7.8106C3.62438 6.51127 6.01238 3.83594 8.80038 3.83594C11.5883 3.83594 13.9763 6.51127 14.9717 7.8106Z"
+                      stroke="black"
+                      stroke-opacity="0.35"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8.80005 10.5C9.90462 10.5 10.8 9.60457 10.8 8.5C10.8 7.39543 9.90462 6.5 8.80005 6.5C7.69548 6.5 6.80005 7.39543 6.80005 8.5C6.80005 9.60457 7.69548 10.5 8.80005 10.5Z"
+                      stroke="black"
+                      stroke-opacity="0.35"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  109</span
+                >
+              </div>
+              <h3 class="blog-article__title">
+                SMM-menejer va Grafik dizaynerlar o'rtasidagi «Marketing Team»
+                jamoaviy
+              </h3>
+              <p class="blog-article__text">
+                «Marketing Team» musobaqasi g'oliblari e'lon qilindi
+              </p>
+            </a>
+          </li>
+          <li class="blog-article__item">
+            <a href="#" class="blog-article__link">
+              <img
+                class="blog-article__img"
+                src="./img/image-3.png"
+                alt="blog article img"
+              />
+              <div class="blog-article__date">
+                <time class="blog-article__date-time"> 19-aprel, 2023 </time>
+                <span class="blog-article__date-time">
+                  <svg
+                    width="17"
+                    height="17"
+                    viewBox="0 0 17 17"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.9717 7.8106C15.2877 8.22394 15.2877 8.78194 14.9717 9.1946C13.9763 10.4939 11.5883 13.1693 8.80038 13.1693C6.01238 13.1693 3.62438 10.4939 2.62905 9.1946C2.47531 8.99669 2.39185 8.75322 2.39185 8.5026C2.39185 8.25199 2.47531 8.00852 2.62905 7.8106C3.62438 6.51127 6.01238 3.83594 8.80038 3.83594C11.5883 3.83594 13.9763 6.51127 14.9717 7.8106Z"
+                      stroke="black"
+                      stroke-opacity="0.35"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8.80005 10.5C9.90462 10.5 10.8 9.60457 10.8 8.5C10.8 7.39543 9.90462 6.5 8.80005 6.5C7.69548 6.5 6.80005 7.39543 6.80005 8.5C6.80005 9.60457 7.69548 10.5 8.80005 10.5Z"
+                      stroke="black"
+                      stroke-opacity="0.35"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  101</span
+                >
+              </div>
+              <h3 class="blog-article__title">
+                2-aprel kuni bo'lib o'tgan dasturlash bo'yicha «Algoritmlash»
+                musobaqasi
+              </h3>
+              <p class="blog-article__text">
+                Dasturchilar o'rtasida «Algoritmlash» musobaqasi
+              </p>
+            </a>
+          </li>
+          <li class="blog-article__item">
+            <a href="#" class="blog-article__link">
+              <img
+                class="blog-article__img"
+                src="./img/image-4.png"
+                alt="blog article img"
+              />
+              <div class="blog-article__date">
+                <time class="blog-article__date-time"> 19-aprel, 2023 </time>
+                <span class="blog-article__date-time">
+                  <svg
+                    width="17"
+                    height="17"
+                    viewBox="0 0 17 17"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.9717 7.8106C15.2877 8.22394 15.2877 8.78194 14.9717 9.1946C13.9763 10.4939 11.5883 13.1693 8.80038 13.1693C6.01238 13.1693 3.62438 10.4939 2.62905 9.1946C2.47531 8.99669 2.39185 8.75322 2.39185 8.5026C2.39185 8.25199 2.47531 8.00852 2.62905 7.8106C3.62438 6.51127 6.01238 3.83594 8.80038 3.83594C11.5883 3.83594 13.9763 6.51127 14.9717 7.8106Z"
+                      stroke="black"
+                      stroke-opacity="0.35"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8.80005 10.5C9.90462 10.5 10.8 9.60457 10.8 8.5C10.8 7.39543 9.90462 6.5 8.80005 6.5C7.69548 6.5 6.80005 7.39543 6.80005 8.5C6.80005 9.60457 7.69548 10.5 8.80005 10.5Z"
+                      stroke="black"
+                      stroke-opacity="0.35"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  187</span
+                >
+              </div>
+              <h3 class="blog-article__title">
+                «Iwash» va «Carbon technologies» loyihalari asoschilari bilan
+                «Shaxsiy
+              </h3>
+              <p class="blog-article__text">
+                Otabek Jurayev va Behzodbek Shoyunusovlar bilan master-klass
+              </p>
+            </a>
+          </li>
+          <li class="blog-article__item">
+            <a href="#" class="blog-article__link">
+              <img
+                class="blog-article__img"
+                src="./img/image-5.png"
+                alt="blog article img"
+              />
+              <div class="blog-article__date">
+                <time class="blog-article__date-time"> 19-aprel, 2023 </time>
+                <span class="blog-article__date-time">
+                  <svg
+                    width="17"
+                    height="17"
+                    viewBox="0 0 17 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.9717 7.8106C15.2877 8.22394 15.2877 8.78194 14.9717 9.1946C13.9763 10.4939 11.5883 13.1693 8.80038 13.1693C6.01238 13.1693 3.62438 10.4939 2.62905 9.1946C2.47531 8.99669 2.39185 8.75322 2.39185 8.5026C2.39185 8.25199 2.47531 8.00852 2.62905 7.8106C3.62438 6.51127 6.01238 3.83594 8.80038 3.83594C11.5883 3.83594 13.9763 6.51127 14.9717 7.8106Z"
+                      stroke="black"
+                      stroke-opacity="0.35"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8.80005 10.5C9.90462 10.5 10.8 9.60457 10.8 8.5C10.8 7.39543 9.90462 6.5 8.80005 6.5C7.69548 6.5 6.80005 7.39543 6.80005 8.5C6.80005 9.60457 7.69548 10.5 8.80005 10.5Z"
+                      stroke="black"
+                      stroke-opacity="0.35"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  270</span
+                >
+              </div>
+              <h3 class="blog-article__title">
+                100 ga yaqin SMM-menejer va grafik dizaynerlar «Marketing Team»
+              </h3>
+              <p class="blog-article__text">
+                «Marketing Team» jamoaviy musobaqasi
+              </p>
+            </a>
+          </li>
+        </ul>
+        <div class="blog__box">
+          <button class="blog__main-link">Ko'proq ko'rish</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__left">
+          <a class="footer__logo-link" href="#">
+            <img
+              class="footer__logo-img"
+              src="./img/footer-logo.svg"
+              width="214"
+              height="46"
+              alt="footer logo"
+            />
+          </a>
+          <p class="footer__text footer__text--top">
+            Onlayn platformaga tegishli barcha materiallar "NAJOT TA‘LIM
+            MARKAZI" MCHJning mulki hisoblanadi. Ushbu materiallardan onlayn
+            ta‘lim olishdan tashqari nusxa ko‘chirish, tarqatish va boshqa
+            maqsadlarda foydalanish qonunan man etiladi.
+          </p>
+          <p class="footer__text footer__text--top">
+            © Najot Ta'lim, 2023
+            <br />
+            Barcha huquqlar himoyalangan.
+          </p>
+        </div>
+        <div class="footer__right">
+          <div class="footer__lists">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <h4 class="footer__item-title" href="#">Ma'lumotlar</h4>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">FAQ</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Blog</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Ommaviy oferta</a>
+              </li>
+            </ul>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <h4 class="footer__item-title" href="#">Ommabop kurslar</h4>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Dasturlash foundation</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">.NET mutaxassislik kursi</a>
+              </li>
+            </ul>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <h4 class="footer__item-title" href="#">Bizning loyihalar</h4>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Osmondagi bolalar</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">0 dan 1 gacha</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Abutech</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Alohida mavzu</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__contact">
+            <div class="footer__contact-address">
+              <h4 class="footer__contact-title">
+                Toshkent shahri, Chilonzor-9, Qatortol ko‘chasi
+              </h4>
+              <p class="footer__contact-text-light">
+                Mo‘ljal: Rayhon milliy taomlari qarshi tomoni, 1- va 2-uylar
+                orqa tomoni.
+              </p>
+            </div>
+            <div class="footer__contact-network">
+              <h4 class="footer__contact-title">Tarmoqlar:</h4>
+              <ul class="footer__icons">
+                <li class="footer__icon">
+                  <a class="footer__icon-link" href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="27"
+                      fill="none"
+                    >
+                      <g clip-path="url(#a)">
+                        <path
+                          fill="currentColor"
+                          fill-rule="evenodd"
+                          d="M24.58 13.28c0 6.876-5.373 12.45-12 12.45s-12-5.574-12-12.45C.58 6.404 5.953.83 12.58.83s12 5.574 12 12.45ZM12.955 9.82c-1.165.513-3.492 1.575-6.981 3.186-.567.238-.864.472-.89.7-.046.386.41.538 1.03.745l.263.088c.61.21 1.433.457 1.86.467.388.009.82-.16 1.299-.508 3.26-2.332 4.943-3.51 5.049-3.535.074-.018.178-.041.248.025s.063.19.055.224c-.045.204-1.835 1.968-2.762 2.88-.29.285-.494.487-.536.533-.094.103-.19.2-.281.295-.568.58-.994 1.014.023 1.724.489.342.88.624 1.27.905.427.308.852.614 1.402.996.14.098.274.199.404.297.496.375.942.711 1.492.657.32-.03.65-.35.818-1.3.397-2.245 1.176-7.111 1.356-9.116a2.37 2.37 0 0 0-.02-.5.546.546 0 0 0-.17-.343c-.144-.123-.365-.15-.464-.147-.45.008-1.141.263-4.465 1.727Z"
+                          clip-rule="evenodd"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M.58.08h24v26h-24z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__icon">
+                  <a class="footer__icon-link" href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="none"
+                    >
+                      <g clip-path="url(#a)">
+                        <path
+                          fill="currentColor"
+                          fill-rule="evenodd"
+                          d="M12.58.08c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.372 12-12c0-6.627-5.373-12-12-12Zm1.155 12v8H10.63v-8H9.08V9.322h1.55V7.667c0-2.25.876-3.587 3.364-3.587h2.071v2.758h-1.294c-.969 0-1.033.385-1.033 1.104l-.003 1.38h2.345l-.274 2.757h-2.071Z"
+                          clip-rule="evenodd"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M.58.08h24v24h-24z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__icon">
+                  <a class="footer__icon-link" href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="none"
+                    >
+                      <g fill="currentColor" clip-path="url(#a)">
+                        <path
+                          fill-rule="evenodd"
+                          d="M12.58.08c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.372 12-12c0-6.627-5.373-12-12-12Zm5 7.875c.552.15.985.596 1.133 1.162.267 1.025.267 3.163.267 3.163s0 2.139-.268 3.164a1.625 1.625 0 0 1-1.131 1.161c-.998.275-5.001.275-5.001.275s-4.003 0-5-.274a1.625 1.625 0 0 1-1.133-1.163C6.18 14.42 6.18 12.28 6.18 12.28s0-2.138.267-3.163c.148-.566.581-1.011 1.132-1.162.998-.275 5.001-.275 5.001-.275s4.003 0 5 .275Z"
+                          clip-rule="evenodd"
+                        />
+                        <path d="M11.38 14.48v-4l3.2 2-3.2 2Z" />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M.58.08h24v24h-24z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__icon">
+                  <a class="footer__icon-link" href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="none"
+                    >
+                      <g clip-path="url(#a)">
+                        <mask
+                          id="b"
+                          width="25"
+                          height="25"
+                          x="0"
+                          y="0"
+                          maskUnits="userSpaceOnUse"
+                          style="mask-type: luminance"
+                        >
+                          <path fill="#fff" d="M24.58.08h-24v24h24v-24Z" />
+                        </mask>
+                        <g mask="url(#b)">
+                          <path
+                            fill="currentColor"
+                            d="M12.58 24.08c6.627 0 12-5.372 12-12 0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12Z"
+                          />
+                          <path
+                            fill="#fff"
+                            d="M15.13 5.412h-5.094A4.12 4.12 0 0 0 5.92 9.53v5.094a4.12 4.12 0 0 0 4.117 4.117h5.094a4.12 4.12 0 0 0 4.117-4.117V9.529a4.12 4.12 0 0 0-4.117-4.117Zm2.629 9.216a2.637 2.637 0 0 1-2.635 2.635h-5.093a2.637 2.637 0 0 1-2.635-2.635V9.535A2.637 2.637 0 0 1 10.031 6.9h5.093a2.637 2.637 0 0 1 2.635 2.635v5.093Z"
+                          />
+                          <path
+                            fill="#fff"
+                            d="M12.58 8.67a3.414 3.414 0 0 0-3.408 3.408 3.414 3.414 0 0 0 3.408 3.408 3.414 3.414 0 0 0 3.408-3.408A3.414 3.414 0 0 0 12.58 8.67Zm0 5.477a2.071 2.071 0 0 1-2.07-2.07c0-1.14.928-2.068 2.07-2.068 1.141 0 2.07.928 2.07 2.069s-.929 2.07-2.07 2.07ZM16.247 9.043a.576.576 0 1 0-.184-1.137.576.576 0 0 0 .184 1.137Z"
+                          />
+                        </g>
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M.58.08h24v24h-24z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__icon">
+                  <a class="footer__icon-link" href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="none"
+                    >
+                      <g clip-path="url(#a)">
+                        <path
+                          fill="currentColor"
+                          d="M.58 12.08c0-6.627 5.373-12 12-12s12 5.373 12 12-5.373 12-12 12-12-5.372-12-12Z"
+                        />
+                        <path
+                          fill="#fff"
+                          fill-rule="evenodd"
+                          d="M9.24 7.491c0 .785-.591 1.413-1.54 1.413h-.017c-.913 0-1.503-.628-1.503-1.413 0-.8.608-1.41 1.539-1.41.93 0 1.503.61 1.52 1.41Zm-.18 2.528v8.17H6.34v-8.17h2.72Zm9.808 8.17v-4.684c0-2.51-1.341-3.678-3.131-3.678-1.444 0-2.09.793-2.451 1.35v-1.158h-2.72c.036.767 0 8.171 0 8.171h2.72v-4.563c0-.244.017-.488.09-.663.196-.488.643-.993 1.395-.993.984 0 1.378.75 1.378 1.848v4.37h2.719Z"
+                          clip-rule="evenodd"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M.58.08h24v24h-24z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="footer__contact-title">Telefon raqami:</h4>
+              <p class="footer__contact-text">+998 (78) 888 9 888</p>
+            </div>
+          </div>
+          <p class="footer__text footer__text--none">
+            © Najot Ta'lim, 2023
+            <br />
+            Barcha huquqlar himoyalangan.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- /FOOTER -->
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
